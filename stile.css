@@ -1,0 +1,86 @@
+/* Definizione dei colori */
+:root {
+    --lapis-lazuli: #586994ff;
+    --cool-gray: #7d869cff;
+    --cadet-gray: #a2ababff;
+    --ash-gray: #b4c4aeff;
+    --cream: #e5e8b6ff;
+}
+
+/* Stile di base per tutto il sito */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--cool-gray);
+    background-color: var(--cream);
+}
+
+/* Header */
+header {
+    background-color: var(--lapis-lazuli);
+    color: var(--cream);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Navigazione */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cream);
+}
+
+nav a:hover {
+    color: var(--ash-gray);
+}
+
+/* Sezione dei progetti */
+#progetti {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#progetti article {
+    background-color: var(--cadet-gray);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--cool-gray);
+    color: var(--cream);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query per la responsività */
+@media (max-width: 600px) {
+    #progetti {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
